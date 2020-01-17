@@ -43,6 +43,7 @@ defmodule RocinanteWeb.Endpoint do
     signing_salt: "Y1cmOF6r"
 
   plug Pow.Plug.Session, otp_app: :rocinante
+  plug PowPersistentSession.Plug.Cookie
 
   plug RocinanteWeb.Router
 end

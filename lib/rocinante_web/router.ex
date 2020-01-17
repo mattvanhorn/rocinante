@@ -23,6 +23,7 @@ defmodule RocinanteWeb.Router do
     pipe_through :browser
 
     pow_routes()
+    pow_extension_routes()
   end
 
   scope "/", RocinanteWeb do
