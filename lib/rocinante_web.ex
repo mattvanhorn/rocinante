@@ -45,6 +45,16 @@ defmodule RocinanteWeb do
     end
   end
 
+  def mailer_view do
+    quote do
+      use Phoenix.View,
+        root: "lib/rocinante_web/templates",
+        namespace: RocinanteWeb
+
+      use Phoenix.HTML
+    end
+  end
+
   def router do
     quote do
       use Phoenix.Router
