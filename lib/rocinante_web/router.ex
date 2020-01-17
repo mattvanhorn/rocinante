@@ -2,6 +2,9 @@ defmodule RocinanteWeb.Router do
   use RocinanteWeb, :router
   use Pow.Phoenix.Router
 
+  use Pow.Extension.Phoenix.Router,
+    extensions: [PowInvitation]
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -23,6 +26,7 @@ defmodule RocinanteWeb.Router do
     pipe_through :browser
 
     pow_routes()
+    pow_extension_routes()
   end
 
   scope "/", RocinanteWeb do
