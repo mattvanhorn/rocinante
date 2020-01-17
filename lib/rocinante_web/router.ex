@@ -1,5 +1,6 @@
 defmodule RocinanteWeb.Router do
   use RocinanteWeb, :router
+  use Pow.Phoenix.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,9 +14,21 @@ defmodule RocinanteWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", RocinanteWeb do
+  pipeline :members_only do
+    plug Pow.Plug.RequireAuthenticated,
+      error_handler: Pow.Phoenix.PlugErrorHandler
+  end
+
+  scope "/" do
     pipe_through :browser
 
+    pow_routes()
+  end
+
+  scope "/", RocinanteWeb do
+    pipe_through [:browser, :members_only]
+
+    # Routes defined here will require an authenticated user
     get "/", PageController, :index
   end
 

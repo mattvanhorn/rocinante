@@ -42,5 +42,7 @@ defmodule RocinanteWeb.Endpoint do
     key: "_rocinante_key",
     signing_salt: "Y1cmOF6r"
 
+  plug Pow.Plug.Session, otp_app: :rocinante
+
   plug RocinanteWeb.Router
 end
