@@ -65,6 +65,9 @@ config :rocinante, RocinanteWeb.Endpoint,
     ]
   ]
 
+# send emails to an in-memory mailbox for preview
+config :rocinante, RocinanteWeb.PowMailer, adapter: Swoosh.Adapters.Local
+
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 
