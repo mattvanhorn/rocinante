@@ -28,6 +28,8 @@ config :phoenix, :json_library, Jason
 config :rocinante, :pow,
   user: Rocinante.Users.User,
   repo: Rocinante.Repo,
+  extensions: [PowEmailConfirmation],
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks,
   mailer_backend: RocinanteWeb.PowMailer,
   web_mailer_module: RocinanteWeb
 
