@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :rocinante, Rocinante.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "rocinante_dev_user",
+  password: "dulcinea",
   database: "rocinante_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
