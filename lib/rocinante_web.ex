@@ -40,6 +40,7 @@ defmodule RocinanteWeb do
       use Phoenix.HTML
 
       import RocinanteWeb.ErrorHelpers
+      import RocinanteWeb.CommonHelpers
       import RocinanteWeb.Gettext
       alias RocinanteWeb.Router.Helpers, as: Routes
     end

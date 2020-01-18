@@ -17,6 +17,8 @@ defmodule RocinanteWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get("/events/calendar", EventController, :calendar)
+    resources "/events", EventController
   end
 
   # Other scopes may use custom stacks.
