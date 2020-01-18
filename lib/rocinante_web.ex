@@ -24,6 +24,8 @@ defmodule RocinanteWeb do
       import Plug.Conn
       import RocinanteWeb.Gettext
       alias RocinanteWeb.Router.Helpers, as: Routes
+
+      use Thesis.Controller
     end
   end
 
@@ -42,6 +44,8 @@ defmodule RocinanteWeb do
       import RocinanteWeb.ErrorHelpers
       import RocinanteWeb.Gettext
       alias RocinanteWeb.Router.Helpers, as: Routes
+
+      use Thesis.View
     end
   end
 
@@ -50,6 +54,8 @@ defmodule RocinanteWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+
+      use Thesis.Router
     end
   end
 
