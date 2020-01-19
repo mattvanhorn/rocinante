@@ -6,6 +6,7 @@ defmodule RocinanteWeb.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
+    plug Phoenix.LiveView.Flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -30,6 +31,7 @@ defmodule RocinanteWeb.Router do
 
     # Routes defined here will require an authenticated user
     get "/", PageController, :index
+    resources "/chats", ChatController
   end
 
   # Other scopes may use custom stacks.

@@ -61,7 +61,8 @@ config :rocinante, RocinanteWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/rocinante_web/{live,views}/.*(ex)$",
-      ~r"lib/rocinante_web/templates/.*(eex)$"
+      ~r"lib/rocinante_web/templates/.*(eex)$",
+      ~r{lib/rocinante_web/live/.*(ex)$}
     ]
   ]
 

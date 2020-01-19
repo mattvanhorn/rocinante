@@ -23,6 +23,7 @@ defmodule RocinanteWeb do
 
       import Plug.Conn
       import RocinanteWeb.Gettext
+      import Phoenix.LiveView.Controller
       alias RocinanteWeb.Router.Helpers, as: Routes
     end
   end
@@ -41,6 +42,7 @@ defmodule RocinanteWeb do
 
       import RocinanteWeb.ErrorHelpers
       import RocinanteWeb.Gettext
+      import Phoenix.LiveView.Helpers
       alias RocinanteWeb.Router.Helpers, as: Routes
     end
   end
@@ -50,6 +52,7 @@ defmodule RocinanteWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 

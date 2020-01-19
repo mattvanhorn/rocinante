@@ -11,9 +11,11 @@ defmodule Rocinante.Application do
       # Start the Ecto repository
       Rocinante.Repo,
       # Start the endpoint when the application starts
-      RocinanteWeb.Endpoint
+      RocinanteWeb.Endpoint,
       # Starts a worker by calling: Rocinante.Worker.start_link(arg)
       # {Rocinante.Worker, arg},
+      # Start the Presence module
+      RocinanteWeb.Presence
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
