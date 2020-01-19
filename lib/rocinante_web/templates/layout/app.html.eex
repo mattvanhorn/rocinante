@@ -14,6 +14,7 @@
         <nav role="navigation">
           <ul>
             <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
+            <li><%= link "Chat Rooms", to: Routes.chat_path(@conn, :index) %></li>
           </ul>
         </nav>
         <a href="http://phoenixframework.org/" class="phx-logo">
